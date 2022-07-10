@@ -6,7 +6,7 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity   // Declara que esta clase es una Entidad
-@Table(name="contienente")    // Indica que tabla se esta mapeando
+@Table(name = "continente")    // Indica que tabla se esta mapeando
 @Getter
 @Setter
 
@@ -21,6 +21,6 @@ public class ContinenteEntity {
 
     private String denominacion;
 
-    // faltaria coidades con iconos geograficos asociados --->  cardinalidad
+
 
 }

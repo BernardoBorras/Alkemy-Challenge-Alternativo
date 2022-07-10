@@ -27,16 +27,19 @@ public class PaisEntity {
 
 
 
+
+
+
+
     //  Buscar informacion, Traer un objeto de tipo continente.
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "contienente_id", insertable = false, updatable = false)
     private ContinenteEntity continente;
 
-
-
     // Guardar y actualizar la columna continenteId.
     @Column(name = "continente_id", nullable = false)
     private Long continenteId;  // Instanciamos un objeto de la clase Continente.
+
 
 
 
@@ -49,5 +52,7 @@ public class PaisEntity {
             joinColumns = @JoinColumn(name = "pais_id"),
             inverseJoinColumns = @JoinColumn(name = "icon_id"))
     private Set<IconEntity> icons = new HashSet<>();
+
+
 
 }
