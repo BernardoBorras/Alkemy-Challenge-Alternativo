@@ -48,5 +48,15 @@ public class ContinenteServiceImp implements ContinenteService {
         return result;
     }
 
+
+
+    // Sabe que tiene que hacer un soft delete por que se definio en la entidad
+    // Con la anotacion @SQLDelete()
+
+   public void delete(Long id){
+        this.continenteRepository.deleteById(id);
+    }
+
+
 }
 

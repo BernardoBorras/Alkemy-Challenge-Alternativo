@@ -27,6 +27,12 @@ public class ContinenteController {
    }
 
 
+   @DeleteMapping("/{id}") // Definimos path adicional para indicar id del continente.
+   public ResponseEntity<Void> delete(@PathVariable Long id){
+      this.continenteService.delete(id);
+      return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+   }
+
 
 
    @PostMapping

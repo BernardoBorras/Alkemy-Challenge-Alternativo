@@ -24,6 +24,7 @@ public class ContinenteMapper {
         ContinenteEntity continenteEntity = new ContinenteEntity();
         continenteEntity.setImagen(dto.getImagen());
         continenteEntity.setDenominacion(dto.getDenominacion());
+        continenteEntity.setDeleted(dto.isDeleted());
         return continenteEntity;
     }
 
@@ -33,6 +34,7 @@ public class ContinenteMapper {
      dto.setId(entity.getId());  // regresando de la bd ya tiene id asignado.
      dto.setImagen(entity.getImagen());
      dto.setDenominacion(entity.getDenominacion());
+     dto.setDeleted(entity.isDeleted());
      return dto;
     }
 

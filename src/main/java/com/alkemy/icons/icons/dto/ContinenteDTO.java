@@ -14,5 +14,5 @@ public class ContinenteDTO {
     private Long id;
     private String imagen;
     private String denominacion;
-
+    private boolean deleted;
 }

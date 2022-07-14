@@ -30,7 +30,6 @@ public class IconEntity {
     private Long historia;
 
 
-
     // Definicion del lado del Owner. Consecuentemente, al crear un registro de
     // Pais, este puede recibir un listado de iconos asociados. Pero no al revez.
     @ManyToMany(mappedBy = "icons", cascade = CascadeType.ALL)

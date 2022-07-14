@@ -8,5 +8,7 @@ public interface ContinenteService {
 
     public ContinenteDTO save(ContinenteDTO dto);
 
+    void delete(Long id);
+
     List<ContinenteDTO> getAllContinentes();
 }
