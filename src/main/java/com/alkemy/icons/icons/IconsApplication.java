@@ -10,4 +10,6 @@ public class IconsApplication {
 		SpringApplication.run(IconsApplication.class, args);
 	}
 
+
+
 }

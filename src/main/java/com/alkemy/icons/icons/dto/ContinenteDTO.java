@@ -17,5 +17,18 @@ public class ContinenteDTO {
     private Long id;
     private String imagen;
     private String denominacion;
+    private boolean deleted;
 
+
+    @Override
+    public String toString() {
+        return "ContinenteDTO{" +
+                "id=" + id +
+                ", imagen='" + imagen + '\'' +
+                ", denominacion='" + denominacion + '\'' +
+                ", deleted=" + deleted +
+                '}';
+    }
 }
+
+// comit de prueba
