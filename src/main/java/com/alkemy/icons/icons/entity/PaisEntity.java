@@ -8,7 +8,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity   // Declaramos esta clase como Entidad
-@Table    // Indica contra que tabla mapea la Entidad
+@Table    // Indica contra que tabla mapea la Entidad2
 @Getter
 @Setter
 
@@ -28,17 +28,36 @@ public class PaisEntity {
 
 
 
-
-
-
-    //  Buscar informacion, Traer un objeto de tipo continente.
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name = "contienente_id", insertable = false, updatable = false)
+
+    // Identifica la entidad propietaria de la relacion.
+    // Define la columna contenedora de la llave foranea.
+    @JoinColumn(name = "continente_id", insertable = false, updatable = false)
+
+
+    // Este objeto solo se va a utilizar para traer continentes enteros cuando queramos traer
+    // una lista de paises, estos van a venir con su continente entero.
     private ContinenteEntity continente;
 
-    // Guardar y actualizar la columna continenteId.
+
+
+    // Atributo continenteId renombrado como "continente_id" es la definicion de la columna
+    // que contiene la llave foranea de la Entidad B por definicion. Esta columna se utiliza
+    // para la creacion y actualizacion de paises.
     @Column(name = "continente_id", nullable = false)
     private Long continenteId;  // Instanciamos un objeto de la clase Continente.
+
+
+
+
+
+
+
+
+
+
+1
+
 
 
 
