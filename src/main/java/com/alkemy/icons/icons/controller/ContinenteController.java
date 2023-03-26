@@ -14,7 +14,7 @@ import java.util.List;
 
 public class ContinenteController {
 
-   @Autowired  // Sirve para Enlazar Controllador y Servicio.
+   @Autowired  // Sirve para Enlazar Controllador y Servicio
    private ContinenteService continenteService;  // Sirve para inyectar objeto.
 
 
